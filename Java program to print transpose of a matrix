@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class transpose {
+
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        int a[][] = new int[10][10];
+        int t[][] = new int[10][10];
+        int r, c, i, j;
+
+        System.out.println("Enter the number of rows");
+        r = s.nextInt();
+        System.out.println("Enter the number of Columns");
+        c = s.nextInt();
+
+        System.out.println("Enter your array elements are");
+
+        for (i = 1; i <= r; i++) {
+            for (j = 1; j <= c; j++) {
+                a[i][j] = s.nextInt();
+            }
+        }
+        System.out.println("Array elements are");
+        for (i = 1; i <= r; i++) {
+            for (j = 1; j <= c; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Transpose elements are");
+        for (i = 1; i <= r; i++) {
+            for (j = 1; j <= c; j++) {
+                System.out.print(a[j][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
